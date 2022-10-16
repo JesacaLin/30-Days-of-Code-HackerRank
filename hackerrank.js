@@ -27,33 +27,7 @@ function processData(inputString) {
 // Print the sum of  plus your double variable to a scale of one decimal place on a new line.
 // Concatenate  with the string you read as input and print the result on a new line.
 
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
 
-var input_stdin = "";
-var input_stdin_array = "";
-var input_currentline = 0;
-
-process.stdin.on('data', function (data) {
-    input_stdin += data;
-});
-
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
-});
-
-// Reads complete line from STDIN
-function readLine() {
-    return input_stdin_array[input_currentline++];
-}
-
-function main() {
-    var i = 4
-    var d = 4.0
-    var s = "HackerRank "
-
-    //***MY INPUTS BELOW*** */
     // Declare second integer, double, and String variables.
 let sumI;
 let rounded;
@@ -69,4 +43,30 @@ console.log((d + rounded).toFixed(1));
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
 console.log(s + string)
+
+
+
+//LOOK - Day 3
+//Task
+// Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+
+/*
+ * Complete the 'solve' function below.
+ *
+ * The function accepts following parameters:
+ *  1. DOUBLE meal_cost
+ *  2. INTEGER tip_percent
+ *  3. INTEGER tax_percent
+ */
+
+function solve(meal_cost, tip_percent, tax_percent) {
+    // initialize variables to store calculated valuse of tip, tax and total cost
+    const tipAmount = (meal_cost / 100) * tip_percent;
+    const taxAmount = (tax_percent / 100 ) * meal_cost;
+    // total cost is the sum of the new variables
+    const totalCost = meal_cost + tipAmount + taxAmount
+    // round result to nearest integer
+    
+    console.log(Math.round(totalCost))
+
 }
