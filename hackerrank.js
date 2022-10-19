@@ -160,9 +160,26 @@ function Person(initialAge){
 
 
 
-//LOOK - Day 
-//Objective: 
-//Task: 
+//LOOK - Day 5
+//Objective: In this challenge, we will use loops to do some math. 
+//Task: Given an integer, , print its first  multiples. Each multiple  (where ) should be printed on a new line in the form: n x i = result.
+
+function main() {
+    const n = parseInt(readLine().trim(), 10);
+    for (let i = 1; i <= 10; i++){
+        let answer = n * i
+        console.log(`${n} x ${i} = ${answer}`)
+    }
+};
+
+
+
+
+
+
+
+
+
 
 
 
