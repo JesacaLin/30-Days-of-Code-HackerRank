@@ -1,4 +1,4 @@
-//LOOK - Day 1
+//LOOK - Day 0
 //Objective
 // In this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges throughout HackerRank. Check out the Tutorial tab for learning materials and an instructional video!
 
@@ -16,7 +16,7 @@ function processData(inputString) {
 }
 
 
-//LOOK - Day 2
+//LOOK - Day 1
 // Task
 // Complete the code in the editor below. The variables , , and  are already declared and initialized for you. You must:
 
@@ -46,7 +46,7 @@ console.log(s + string)
 
 
 
-//LOOK - Day 3
+//LOOK - Day 2
 //Task
 // Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
 
@@ -177,15 +177,35 @@ function main() {
 
 
 
+//LOOK - Day 6
+//Objective: Today we will expand our knowledge of strings, combining it with what we have already learned about loops.
+//Task: Given a string, , of length  that is indexed from  to , print its even-indexed and odd-indexed characters as  space-separated strings on a single line (see the Sample below for more detail).
+
+function processData(input) {
+    //Enter your code here
+    const stringInput = input.split("\n")
+
+    let even = "";
+    let odd = "";
+   
+    
+    for (let i = 1; i < stringInput.length; i++){
+        for (let j =0; j < stringInput[i].length; j++){
+            if(j % 2 == 0){
+                even += stringInput[i][j]
+            } else {
+                odd += stringInput[i][j]
+            }
+        }
+        console.log(even + ' ' + odd);
+        even = "";
+        odd = "";
+    }
+} 
 
 
 
 
-
-
-//LOOK - Day 
-//Objective: 
-//Task: 
 
 
 
