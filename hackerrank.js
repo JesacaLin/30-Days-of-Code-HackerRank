@@ -1,4 +1,4 @@
-//LOOK - Day 0
+//LOOK - Day 0 - HELLO, WORLD
 //Objective
 // In this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges throughout HackerRank. Check out the Tutorial tab for learning materials and an instructional video!
 
@@ -14,7 +14,7 @@ function processData(inputString) {
   // Write the second line of output that prints the contents of 'inputString' here.
 }
 
-//LOOK - Day 1
+//LOOK - Day 1 - DATA TYPES
 // Task
 // Complete the code in the editor below. The variables , , and  are already declared and initialized for you. You must:
 
@@ -41,7 +41,7 @@ console.log((d + rounded).toFixed(1));
 // The 's' variable above should be printed first.
 console.log(s + string);
 
-//LOOK - Day 2
+//LOOK - Day 2 - OPERATORS
 //Task
 // Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
 
@@ -65,7 +65,7 @@ function solve(meal_cost, tip_percent, tax_percent) {
   console.log(Math.round(totalCost));
 }
 
-//LOOK - Day 3
+//LOOK - Day 3 - INTRO TO CONDITIONAL STATEMENTS
 //Objective: In this challenge, we learn about conditional statements.
 //Task: Given an integer, , perform the following conditional actions:
 
@@ -104,7 +104,7 @@ function main() {
   }
 }
 
-//LOOK - Day 4
+//LOOK - Day 4 - CLASS VS INSTANCE
 //Objective: In this challenge, we're going to learn about the difference between a class and an instance; because this is an Object Oriented concept, it's only enabled in certain languages.
 //Task: Write a Person class with an instance variable, , and a constructor that takes an integer, , as a parameter. The constructor must assign  to  after confirming the argument passed as  is not negative; if a negative argument is passed as , the constructor should set  to  and print Age is not valid, setting age to 0.. In addition, you must write the following instance methods:
 
@@ -143,7 +143,7 @@ function Person(initialAge) {
   };
 }
 
-//LOOK - Day 5
+//LOOK - Day 5 - LOOPS
 //Objective: In this challenge, we will use loops to do some math.
 //Task: Given an integer, , print its first  multiples. Each multiple  (where ) should be printed on a new line in the form: n x i = result.
 
@@ -155,7 +155,7 @@ function main() {
   }
 }
 
-//LOOK - Day 6
+//LOOK - Day 6 - LET'S REVIEW
 //Objective: Today we will expand our knowledge of strings, combining it with what we have already learned about loops.
 //Task: Given a string, , of length  that is indexed from  to , print its even-indexed and odd-indexed characters as  space-separated strings on a single line (see the Sample below for more detail).
 
@@ -180,7 +180,7 @@ function processData(input) {
   }
 }
 
-//LOOK - Day 7
+//LOOK - Day 7 - ARRAYS
 //Objective: Today, we will learn about the Array data structure.
 //Task: Given an array, , of  integers, print 's elements in reverse order as a single line of space-separated numbers.
 
@@ -195,23 +195,47 @@ function main() {
   console.log(arr.reverse().join(" "));
 }
 
-//LOOK - Day 8
+//LOOK - Day 8 - DICTIONARY AND MAPS
+//******NEED TO COME BACK AND REDO THIS ONE...******
+// https://marcuscript.wordpress.com/2017/05/18/30-days-of-code-day-8-dictionaries-and-maps/
+//Objective: Today, we're learning about Key-Value pair mappings using a Map or Dictionary data structure.
+//Task: Given  names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. For each  queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for  is not found, print Not found instead.
+//Note: Your phone book should be a Dictionary/Map/HashMap data structure.
+
+function processData(input) {
+  input = input.split("\n");
+  let n = parseInt(input[0]);
+  let phoneBook = [];
+
+  for (let i = 0; i < n; i++) {
+    let newInput = input[i + 1];
+    newInput = newInput.split(" ");
+    phoneBook[newInput[0]] = newInput[1];
+  }
+
+  for (let i = n + 1; i < input.length; i++) {
+    let num = phoneBook[input[i]];
+    if (num !== undefined) {
+      console.log(input[i] + "=" + num);
+    } else {
+      console.log("Not found");
+    }
+  }
+}
+
+//LOOK - Day 9 -
 //Objective:
 //Task:
 
-//LOOK - Day
+//LOOK - Day 10 -
 //Objective:
 //Task:
 
-//LOOK - Day
+//LOOK - Day 11 -
 //Objective:
 //Task:
 
-//LOOK - Day
-//Objective:
-//Task:
-
-//LOOK - Day
+//LOOK - Day 12 -
 //Objective:
 //Task:
 
