@@ -223,9 +223,20 @@ function processData(input) {
   }
 }
 
-//LOOK - Day 9 -
-//Objective:
-//Task:
+//LOOK - Day 9 - RECURSION 3
+//Objective: Today, we are learning about an algorithmic concept called recursion.
+//Task: Complete the factorial function in the editor below. Be sure to use recursion.
+// factorial has the following paramter:
+// int n: an integer
+
+function factorial(n) {
+  // Write your code here
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
 
 //LOOK - Day 10 -
 //Objective:
