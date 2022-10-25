@@ -238,9 +238,42 @@ function factorial(n) {
   }
 }
 
-//LOOK - Day 10 -
-//Objective:
-//Task:
+//LOOK - Day 10 - BINARY NUMBERS
+//Objective: Today, we're working with binary numbers.
+//Task: Given a base- integer, , convert it to binary (base-). Then find and print the base- integer denoting the maximum number of consecutive 's in 's binary representation. When working with different bases, it is common to show the base as a subscript.
+
+function main() {
+  const n = parseInt(readLine().trim(), 10);
+  //figure out a way to find the binary representation of n
+  const binaryN = n.toString(2).split("");
+  //count how many consecutive there are.
+  let counter = 0;
+  let max = 0;
+  for (let i = 0; i < binaryN.length; i++) {
+    if (binaryN[i] == 1) {
+      counter++;
+      if (counter > max) {
+        max = counter;
+      }
+    } else {
+      counter = 0;
+    }
+  }
+  console.log(max);
+}
+
+//someone's ultra smart solution
+
+function main() {
+  let n = parseInt(readLine().trim(), 10);
+
+  let count = 0;
+  while (n > 0) {
+    n = n & (n << 1);
+    count++;
+  }
+  console.log(count);
+}
 
 //LOOK - Day 11 -
 //Objective:
