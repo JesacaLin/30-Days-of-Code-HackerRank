@@ -423,9 +423,27 @@ public Difference(int[] a )
 
 
 
-//LOOK - Day
-//Objective:
-//Task:
+//LOOK - Day 15: LINKED LIST
+//Objective: Today we will work with a Linked List. 
+//Task: Complete the insert function in your editor so that it creates a new Node (pass data as the Node constructor argument) and inserts it at the tail of the linked list referenced by the head parameter. Once the new node is added, return the reference to the head node.
+
+//Note: The head argument is null for an empty list.
+
+this.insert=function(head,data){
+  //complete this method
+  // see if the head is null to begin with. If yes, make a new null that becomes            the head
+  let current = head;
+  if (head == null){
+      return head = new Node(data)
+  } else{
+      while (current.next != null){
+          current = current.next;
+      }
+      current.next = new Node(data);
+      return head;
+  }
+};
+
 
 //LOOK - Day
 //Objective:
