@@ -463,17 +463,35 @@ function main() {
 }
 
 
-//LOOK - Day
-//Objective:
-//Task:
+//LOOK - Day 17: MORE EXCEPTIONS
+//Objective: Yesterday's challenge taught you to manage exceptional situations by using try and catch blocks. In today's challenge, you will practice throwing and propagating an exception. 
+//Task: Write a Calculator class with a single method: int power(int,int). The power method takes two integers, n and p, as parameters and returns the integer result of n to power of p. If either n or p is negative, then the method must throw an exception with the message: n and p should be non-negative.
 
-//LOOK - Day
-//Objective:
-//Task:
 
-//LOOK - Day
+class Calculator{
+  power(n, p){
+      if (Math.sign(n) === -1 || Math.sign(p) === -1){
+          throw "n and p should be non-negative"
+      } else{
+          return Math.pow(n, p)
+      }
+  } 
+}
+
+
+
+
+//LOOK - Day 18
 //Objective:
-//Task:
+//Task: 
+
+
+
+//LOOK - Day 19: INTERFACES
+//Objective: Today, we're learning about Interfaces.
+//Task: The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below. Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of n.
+
+//not able to complete with JS so I will skip.
 
 //LOOK - Day
 //Objective:
