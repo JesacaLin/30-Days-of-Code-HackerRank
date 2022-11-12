@@ -481,10 +481,29 @@ class Calculator{
 
 
 
-//LOOK - Day 18
-//Objective:
-//Task: 
+//LOOK - Day 18 QUEUES AND STACKS
+//Objective: Today we're learning about Stacks and Queues.
+//Task: A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards and forwards. Can you determine if a given string, s, is a palindrome?
 
+
+this.queue = [];
+this.stack = [];
+ 
+    this.pushCharacter = function(ch) { //Adds character onto top of stack.
+        this.stack.push(ch);
+    }
+ 
+    this.enqueueCharacter = function(ch) { //Adds character to end of queue.
+        this.queue.push(ch);
+    }
+ 
+    this.popCharacter = function() { //Returns character on top of stack.
+        return this.stack.pop();
+    }
+ 
+    this.dequeueCharacter = function() { //Returns character from beginning of queue.
+        return this.queue.shift();
+    }
 
 
 //LOOK - Day 19: INTERFACES
