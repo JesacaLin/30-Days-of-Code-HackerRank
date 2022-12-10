@@ -544,17 +544,57 @@ function main() {
 }
 
 
-//LOOK - Day
+//LOOK - Day 21 - Javascript not available so I will skip.
 //Objective:
 //Task:
 
-//LOOK - Day
-//Objective:
-//Task:
+//LOOK - Day 22 BINARY SEARCH TREE
+//Objective: Today, we're working with Binary Search Trees (BSTs). 
+//Task: The height of a binary search tree is the number of edges between the tree's root and its furthest leaf. You are given a pointer, , pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.
 
-//LOOK - Day
-//Objective:
-//Task:
+// Start of function getHeight
+this.getHeight = function(root) {
+
+  // Add your code here
+  if(!root) return -1
+const leftHeight = this.getHeight(root.left);
+const rightHeight = this.getHeight(root.right)
+
+ return Math.max(leftHeight, rightHeight) + 1;
+  
+}; // End of function getHeight
+
+//LOOK - Day 23: BST LEVEL-ORDER TRAVERSAL
+//Objective: Today, we're going further with Binary Search Trees.
+//Task: A level-order traversal, also known as a breadth-first search, visits each level of a tree's nodes from left to right, top to bottom. You are given a pointer, , pointing to the root of a binary search tree. Complete the levelOrder function provided in your editor so that it prints the level-order traversal of the binary search tree. Hint: You'll find a queue helpful in completing this challenge.
+
+this.levelOrder = function(root) {
+
+  // Add your code here
+  // To print values separated by spaces use process.stdout.write(someValue + ' ')
+  //Level-Order Traversal/Breadth-First Search (BFS) begins by processing the root.
+  //Then the children of the root (left to right). Then the grandchildren (left to right).
+  // create an empty queue
+  let q = [];
+  //push the root value to the array
+  q.push(root);
+  
+  //loop while the queue is not empty
+  while(q.length > 0){
+    //Shift removes the first element in array and stores it to our variable.
+      let node = q.shift();
+    //print the data
+      process.stdout.write(node.data + ' ')
+    //if node (each element we encounter) has a left or right child, we push it to the queue.
+      if (node.left) q.push(node.left);
+      if (node.right) q.push(node.right);
+  }
+  
+
+
+  
+
+
 
 //LOOK - Day
 //Objective:
