@@ -512,9 +512,37 @@ this.stack = [];
 
 //not able to complete with JS so I will skip.
 
-//LOOK - Day
-//Objective:
-//Task:
+//LOOK - Day 20: SORTING
+//Objective: Today, we're discussing a simple sorting algorithm called Bubble Sort. 
+//Task: Given an array, , of size  distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. 
+
+function main() {
+  const n = parseInt(readLine().trim(), 10);
+
+  const a = readLine().replace(/\s+$/g, '').split(' ').map(aTemp => parseInt(aTemp, 10));
+  // Write your code here
+  let numSwapped = 0;
+  
+  for(let i = 0; i < n - 1; i++){
+      let innerSwapped = 0;
+      for(let j = 0; j < n -1; j++){
+          if (a[j] > a[j + 1]){
+              [a[j], a[j +1]] = [a[j + 1], a [j]]
+              innerSwapped++
+          }
+      }
+      if (innerSwapped == 0){
+          break;
+      } else{
+          numSwapped += innerSwapped;
+      }
+  }
+
+  console.log(`Array is sorted in ${numSwapped} swaps.`);
+  console.log(`First Element: ${a[0]}`);
+  console.log(`Last Element: ${a[n - 1 ]}`)
+}
+
 
 //LOOK - Day
 //Objective:
